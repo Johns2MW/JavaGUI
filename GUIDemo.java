@@ -56,6 +56,5 @@ public class GUIDemo extends JFrame
     public static void main(String[] args)
     {
         GUIDemo app = new GUIDemo();
-	        setTitle("Bigger/Smaller");
     }
 }
