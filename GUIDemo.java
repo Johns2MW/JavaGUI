@@ -20,7 +20,7 @@ public class GUIDemo extends JFrame
      * Set up the application.
      */
     public GUIDemo()
-    {
+    { 
         setTitle("Bigger/Biggest/Smaller");
         setSize(200, 100);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
