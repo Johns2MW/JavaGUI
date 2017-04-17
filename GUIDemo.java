@@ -21,20 +21,20 @@ public class GUIDemo extends JFrame
      */
     public GUIDemo()
     {
-        setTitle("Bigger/Medium/Smaller");
+        setTitle("Bigger/Biggest/Smaller");
         setSize(200, 100);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         panel = new JPanel();
         biggerButton = new JButton("BIGGER");
         smallerButton = new JButton("SMALLER");
-		mediumButton = new JButton("MEDIUM");
+		biggestButton = new JButton("BIGGEST");
         biggerButton.addActionListener(new ButtonHandler());
         smallerButton.addActionListener(new ButtonHandler());
 		mediumButton.addActionListener(new ButtonHandler());
         add(panel);
         panel.add(biggerButton);
         panel.add(smallerButton);
-		panel.add(mediumButton);
+		panel.add(biggestButton);
         setVisible(true);
     }
 
@@ -55,9 +55,9 @@ public class GUIDemo extends JFrame
             if (e.getSource().equals(biggerButton))
             {
                 setSize(size.width + 10, size.height + 10);
-            } else if (e.getSource().equals(mediumButton));
+            } else if (e.getSource().equals(biggestButton));
 			{
-				setSize(size.with + 20, size.height + 20);
+				setSize(size.with + 30, size.height + 30);
 			}
             else
             {
