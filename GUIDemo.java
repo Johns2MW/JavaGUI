@@ -21,7 +21,21 @@ public class GUIDemo extends JFrame
      */
     public GUIDemo()
     {
-	// CONSTRUCTOR NEEDS TO BE FINISHED!
+        setTitle("Bigger/Medium/Smaller");
+        setSize(200, 100);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        panel = new JPanel();
+        biggerButton = new JButton("BIGGER");
+        smallerButton = new JButton("SMALLER");
+		mediumButton = new JButton("MEDIUM");
+        biggerButton.addActionListener(new ButtonHandler());
+        smallerButton.addActionListener(new ButtonHandler());
+		mediumButton.addActionListener(new ButtonHandler());
+        add(panel);
+        panel.add(biggerButton);
+        panel.add(smallerButton);
+		panel.add(mediumButton);
+        setVisible(true);
     }
 
     /**
@@ -41,7 +55,10 @@ public class GUIDemo extends JFrame
             if (e.getSource().equals(biggerButton))
             {
                 setSize(size.width + 10, size.height + 10);
-            }
+            } else if (e.getSource().equals(mediumButton));
+			{
+				setSize(size.with + 20, size.height + 20);
+			}
             else
             {
                 setSize(size.width - 10, size.height - 10);
@@ -56,17 +73,5 @@ public class GUIDemo extends JFrame
     public static void main(String[] args)
     {
         GUIDemo app = new GUIDemo();
-        setTitle("Bigger/Smaller");
-        setSize(200, 100);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        panel = new JPanel();
-        biggerButton = new JButton("BIGGER");
-        smallerButton = new JButton("SMALLER");
-        biggerButton.addActionListener(new ButtonHandler());
-        smallerButton.addActionListener(new ButtonHandler());
-        add(panel);
-        panel.add(biggerButton);
-        panel.add(smallerButton);
-        setVisible(true);
     }
 }
