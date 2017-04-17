@@ -56,5 +56,17 @@ public class GUIDemo extends JFrame
     public static void main(String[] args)
     {
         GUIDemo app = new GUIDemo();
+        setTitle("Bigger/Smaller");
+        setSize(200, 100);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        panel = new JPanel();
+        biggerButton = new JButton("BIGGER");
+        smallerButton = new JButton("SMALLER");
+        biggerButton.addActionListener(new ButtonHandler());
+        smallerButton.addActionListener(new ButtonHandler());
+        add(panel);
+        panel.add(biggerButton);
+        panel.add(smallerButton);
+        setVisible(true);
     }
 }
